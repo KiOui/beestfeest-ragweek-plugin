@@ -1,0 +1,281 @@
+# Copyright (C) 2022 Lars van Rhijn
+# This file is distributed under the same license as the BeestFeest RAGweek Plugin plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: BeestFeest RAGweek Plugin 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/beestfeest-ragweek-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-03-04T13:43:51+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: beestfeest-ragweek\n"
+
+#. Plugin Name of the plugin
+msgid "BeestFeest RAGweek Plugin"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/KiOui/beestfeest-ragweek-plugin"
+msgstr ""
+
+#. Description of the plugin
+msgid "A WordPress plugin for the BeestFeest RAGweek edition"
+msgstr ""
+
+#. Author of the plugin
+msgid "Lars van Rhijn"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://larsvanrhijn.nl/"
+msgstr ""
+
+#: includes/bfrw-functions.php:22
+msgid "Current bid"
+msgstr ""
+
+#: includes/class-bfrwcore.php:113
+#: includes/class-bfrwcore.php:115
+#: includes/class-bfrwcore.php:136
+msgid "Requested songs"
+msgstr ""
+
+#: includes/class-bfrwcore.php:116
+msgid "Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:117
+#: includes/class-bfrwcore.php:173
+msgid "Add New"
+msgstr ""
+
+#: includes/class-bfrwcore.php:118
+msgid "Add New Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:119
+msgid "Edit Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:120
+msgid "New Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:121
+msgid "View Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:122
+msgid "View Requested songs"
+msgstr ""
+
+#: includes/class-bfrwcore.php:123
+msgid "Search Requested songs"
+msgstr ""
+
+#: includes/class-bfrwcore.php:124
+msgid "No requested songs found"
+msgstr ""
+
+#: includes/class-bfrwcore.php:125
+msgid "No requested songs found in trash"
+msgstr ""
+
+#: includes/class-bfrwcore.php:126
+msgid "Parent Requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:127
+msgid "All Requested songs"
+msgstr ""
+
+#: includes/class-bfrwcore.php:128
+msgid "Requested song Archives"
+msgstr ""
+
+#: includes/class-bfrwcore.php:129
+msgid "Requested song Attributes"
+msgstr ""
+
+#: includes/class-bfrwcore.php:130
+msgid "Insert into requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:131
+msgid "Uploaded to this requested song"
+msgstr ""
+
+#: includes/class-bfrwcore.php:132
+#: includes/class-bfrwcore.php:188
+msgid "Featured image"
+msgstr ""
+
+#: includes/class-bfrwcore.php:133
+#: includes/class-bfrwcore.php:189
+msgid "Set featured image"
+msgstr ""
+
+#: includes/class-bfrwcore.php:134
+#: includes/class-bfrwcore.php:190
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/class-bfrwcore.php:135
+#: includes/class-bfrwcore.php:191
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/class-bfrwcore.php:137
+msgid "Filter requested songs list"
+msgstr ""
+
+#: includes/class-bfrwcore.php:138
+#: includes/class-bfrwcore.php:194
+msgid "Filter by date"
+msgstr ""
+
+#: includes/class-bfrwcore.php:139
+msgid "Requested songs list navigation"
+msgstr ""
+
+#: includes/class-bfrwcore.php:140
+msgid "Requested songs list"
+msgstr ""
+
+#: includes/class-bfrwcore.php:141
+msgid "Requested song published"
+msgstr ""
+
+#: includes/class-bfrwcore.php:142
+msgid "Requested song published privately"
+msgstr ""
+
+#: includes/class-bfrwcore.php:143
+msgid "Requested song reverted to draft"
+msgstr ""
+
+#: includes/class-bfrwcore.php:144
+msgid "Requested song scheduled"
+msgstr ""
+
+#: includes/class-bfrwcore.php:145
+msgid "Requested song updated"
+msgstr ""
+
+#: includes/class-bfrwcore.php:147
+msgid "Requested song post type"
+msgstr ""
+
+#: includes/class-bfrwcore.php:169
+#: includes/class-bfrwcore.php:171
+#: includes/class-bfrwcore.php:192
+msgid "Notifications"
+msgstr ""
+
+#: includes/class-bfrwcore.php:172
+msgid "Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:174
+msgid "Add New Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:175
+msgid "Edit Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:176
+msgid "New Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:177
+msgid "View Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:178
+msgid "View Notifications"
+msgstr ""
+
+#: includes/class-bfrwcore.php:179
+msgid "Search Notifications"
+msgstr ""
+
+#: includes/class-bfrwcore.php:180
+msgid "No notifications found"
+msgstr ""
+
+#: includes/class-bfrwcore.php:181
+msgid "No notifications found in trash"
+msgstr ""
+
+#: includes/class-bfrwcore.php:182
+msgid "Parent Notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:183
+msgid "All Notifications"
+msgstr ""
+
+#: includes/class-bfrwcore.php:184
+msgid "Notification Archives"
+msgstr ""
+
+#: includes/class-bfrwcore.php:185
+msgid "Notification Attributes"
+msgstr ""
+
+#: includes/class-bfrwcore.php:186
+msgid "Insert into notifications"
+msgstr ""
+
+#: includes/class-bfrwcore.php:187
+msgid "Uploaded to this notification"
+msgstr ""
+
+#: includes/class-bfrwcore.php:193
+msgid "Filter notifications list"
+msgstr ""
+
+#: includes/class-bfrwcore.php:195
+msgid "Notifications list navigation"
+msgstr ""
+
+#: includes/class-bfrwcore.php:196
+msgid "Notifications list"
+msgstr ""
+
+#: includes/class-bfrwcore.php:197
+msgid "Notification published"
+msgstr ""
+
+#: includes/class-bfrwcore.php:198
+msgid "Notification published privately"
+msgstr ""
+
+#: includes/class-bfrwcore.php:199
+msgid "Notification reverted to draft"
+msgstr ""
+
+#: includes/class-bfrwcore.php:200
+msgid "Notification scheduled"
+msgstr ""
+
+#: includes/class-bfrwcore.php:201
+msgid "Notification updated"
+msgstr ""
+
+#: includes/class-bfrwcore.php:203
+msgid "Notification post type"
+msgstr ""
+
+#: includes/class-bfrwcore.php:233
+msgid "Requested song bid"
+msgstr ""
+
+#: includes/class-bfrwcore.php:234
+msgid "Price paid for requesting the song"
+msgstr ""
