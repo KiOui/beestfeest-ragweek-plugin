@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: BeestFeest RAGweek Plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/beestfeest-"
 "ragweek-plugin\n"
-"POT-Creation-Date: 2022-03-04T13:43:51+00:00\n"
-"PO-Revision-Date: 2022-03-04 14:53+0100\n"
+"POT-Creation-Date: 2022-03-05T11:00:36+00:00\n"
+"PO-Revision-Date: 2022-03-05 12:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -41,236 +41,240 @@ msgstr "https://larsvanrhijn.nl/"
 msgid "Current bid"
 msgstr "Huidig bod"
 
-#: includes/class-bfrwcore.php:113 includes/class-bfrwcore.php:115
-#: includes/class-bfrwcore.php:136
+#: includes/class-bfrwcore.php:98
+msgid "RAGweek manager"
+msgstr "RAGweek beheerder"
+
+#: includes/class-bfrwcore.php:115 includes/class-bfrwcore.php:117
+#: includes/class-bfrwcore.php:138
 msgid "Requested songs"
 msgstr "Aangevraagde nummers"
 
-#: includes/class-bfrwcore.php:116
+#: includes/class-bfrwcore.php:118
 msgid "Requested song"
 msgstr "Aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:117 includes/class-bfrwcore.php:173
+#: includes/class-bfrwcore.php:119 includes/class-bfrwcore.php:177
 msgid "Add New"
 msgstr "Voeg Nieuwe toe"
 
-#: includes/class-bfrwcore.php:118
+#: includes/class-bfrwcore.php:120
 msgid "Add New Requested song"
 msgstr "Voeg Nieuw Aangevraagd nummer toe"
 
-#: includes/class-bfrwcore.php:119
+#: includes/class-bfrwcore.php:121
 msgid "Edit Requested song"
 msgstr "Bewerk Aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:120
+#: includes/class-bfrwcore.php:122
 msgid "New Requested song"
 msgstr "Nieuw Aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:121
+#: includes/class-bfrwcore.php:123
 msgid "View Requested song"
 msgstr "Bekijk Aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:122
+#: includes/class-bfrwcore.php:124
 msgid "View Requested songs"
 msgstr "Bekijk Aangevraagde nummers"
 
-#: includes/class-bfrwcore.php:123
+#: includes/class-bfrwcore.php:125
 msgid "Search Requested songs"
 msgstr "Zoek Aangevraagde nummers"
 
-#: includes/class-bfrwcore.php:124
+#: includes/class-bfrwcore.php:126
 msgid "No requested songs found"
 msgstr "Geen aangevraagde nummers gevonden"
 
-#: includes/class-bfrwcore.php:125
+#: includes/class-bfrwcore.php:127
 msgid "No requested songs found in trash"
 msgstr "Geen aangevraagde nummers gevonden in de prullenbak"
 
-#: includes/class-bfrwcore.php:126
+#: includes/class-bfrwcore.php:128
 msgid "Parent Requested song"
 msgstr "Hoofd Aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:127
+#: includes/class-bfrwcore.php:129
 msgid "All Requested songs"
 msgstr "Alle Aangevraagde nummers"
 
-#: includes/class-bfrwcore.php:128
+#: includes/class-bfrwcore.php:130
 msgid "Requested song Archives"
 msgstr "Aangevraagd nummer Archieven"
 
-#: includes/class-bfrwcore.php:129
+#: includes/class-bfrwcore.php:131
 msgid "Requested song Attributes"
 msgstr "Aangevraagd nummer attributen"
 
-#: includes/class-bfrwcore.php:130
+#: includes/class-bfrwcore.php:132
 msgid "Insert into requested song"
 msgstr "Voeg in aangevraagd nummer"
 
-#: includes/class-bfrwcore.php:131
+#: includes/class-bfrwcore.php:133
 msgid "Uploaded to this requested song"
 msgstr "Geüpload naar dit aangevraagde nummer"
 
-#: includes/class-bfrwcore.php:132 includes/class-bfrwcore.php:188
+#: includes/class-bfrwcore.php:134 includes/class-bfrwcore.php:192
 msgid "Featured image"
 msgstr "Uitgelichte afbeelding"
 
-#: includes/class-bfrwcore.php:133 includes/class-bfrwcore.php:189
+#: includes/class-bfrwcore.php:135 includes/class-bfrwcore.php:193
 msgid "Set featured image"
 msgstr "Stel uitgelichte afbeelding in"
 
-#: includes/class-bfrwcore.php:134 includes/class-bfrwcore.php:190
+#: includes/class-bfrwcore.php:136 includes/class-bfrwcore.php:194
 msgid "Remove featured image"
 msgstr "Verwijder uitgelichte afbeelding"
 
-#: includes/class-bfrwcore.php:135 includes/class-bfrwcore.php:191
+#: includes/class-bfrwcore.php:137 includes/class-bfrwcore.php:195
 msgid "Use as featured image"
 msgstr "Gebruik als uitgelichte afbeelding"
 
-#: includes/class-bfrwcore.php:137
+#: includes/class-bfrwcore.php:139
 msgid "Filter requested songs list"
 msgstr "Filter aangevraagde nummers lijst"
 
-#: includes/class-bfrwcore.php:138 includes/class-bfrwcore.php:194
+#: includes/class-bfrwcore.php:140 includes/class-bfrwcore.php:198
 msgid "Filter by date"
 msgstr "Filter op datum"
 
-#: includes/class-bfrwcore.php:139
+#: includes/class-bfrwcore.php:141
 msgid "Requested songs list navigation"
 msgstr "Aangevraagde nummers lijst navigatie"
 
-#: includes/class-bfrwcore.php:140
+#: includes/class-bfrwcore.php:142
 msgid "Requested songs list"
 msgstr "Aangevraagde nummers lijst"
 
-#: includes/class-bfrwcore.php:141
+#: includes/class-bfrwcore.php:143
 msgid "Requested song published"
 msgstr "Aangevraagd nummer gepubliceerd"
 
-#: includes/class-bfrwcore.php:142
+#: includes/class-bfrwcore.php:144
 msgid "Requested song published privately"
 msgstr "Aangevraagd nummer privé gepubliceerd"
 
-#: includes/class-bfrwcore.php:143
+#: includes/class-bfrwcore.php:145
 msgid "Requested song reverted to draft"
 msgstr "Aangevraagd nummer teruggedraaid naar concept"
 
-#: includes/class-bfrwcore.php:144
+#: includes/class-bfrwcore.php:146
 msgid "Requested song scheduled"
 msgstr "Aangevraagd nummer ingepland"
 
-#: includes/class-bfrwcore.php:145
+#: includes/class-bfrwcore.php:147
 msgid "Requested song updated"
 msgstr "Aangevraagd nummer geüpdatet"
 
-#: includes/class-bfrwcore.php:147
+#: includes/class-bfrwcore.php:149
 msgid "Requested song post type"
 msgstr "Aangevraagd nummer post type"
 
-#: includes/class-bfrwcore.php:169 includes/class-bfrwcore.php:171
-#: includes/class-bfrwcore.php:192
+#: includes/class-bfrwcore.php:173 includes/class-bfrwcore.php:175
+#: includes/class-bfrwcore.php:196
 msgid "Notifications"
 msgstr "Aankondigingen"
 
-#: includes/class-bfrwcore.php:172
+#: includes/class-bfrwcore.php:176
 msgid "Notification"
 msgstr "Aankondiging"
 
-#: includes/class-bfrwcore.php:174
+#: includes/class-bfrwcore.php:178
 msgid "Add New Notification"
 msgstr "Voeg Nieuwe Aankondiging toe"
 
-#: includes/class-bfrwcore.php:175
+#: includes/class-bfrwcore.php:179
 msgid "Edit Notification"
 msgstr "Bewerk Aankondiging"
 
-#: includes/class-bfrwcore.php:176
+#: includes/class-bfrwcore.php:180
 msgid "New Notification"
 msgstr "Nieuwe Aankondiging"
 
-#: includes/class-bfrwcore.php:177
+#: includes/class-bfrwcore.php:181
 msgid "View Notification"
 msgstr "Bekijk Aankondiging"
 
-#: includes/class-bfrwcore.php:178
+#: includes/class-bfrwcore.php:182
 msgid "View Notifications"
 msgstr "Bekijk Aankondigingen"
 
-#: includes/class-bfrwcore.php:179
+#: includes/class-bfrwcore.php:183
 msgid "Search Notifications"
 msgstr "Zoek Aankondigingen"
 
-#: includes/class-bfrwcore.php:180
+#: includes/class-bfrwcore.php:184
 msgid "No notifications found"
 msgstr "Geen aankondigingen gevonden"
 
-#: includes/class-bfrwcore.php:181
+#: includes/class-bfrwcore.php:185
 msgid "No notifications found in trash"
 msgstr "Geen aankondigingen gevonden in de prullenbak"
 
-#: includes/class-bfrwcore.php:182
+#: includes/class-bfrwcore.php:186
 msgid "Parent Notification"
 msgstr "Hoofd Aankondiging"
 
-#: includes/class-bfrwcore.php:183
+#: includes/class-bfrwcore.php:187
 msgid "All Notifications"
 msgstr "Alle Aankondigingen"
 
-#: includes/class-bfrwcore.php:184
+#: includes/class-bfrwcore.php:188
 msgid "Notification Archives"
 msgstr "Aankondiging Archieven"
 
-#: includes/class-bfrwcore.php:185
+#: includes/class-bfrwcore.php:189
 msgid "Notification Attributes"
 msgstr "Aankondiging Attributen"
 
-#: includes/class-bfrwcore.php:186
+#: includes/class-bfrwcore.php:190
 msgid "Insert into notifications"
 msgstr "Voeg in aankondigingen"
 
-#: includes/class-bfrwcore.php:187
+#: includes/class-bfrwcore.php:191
 msgid "Uploaded to this notification"
 msgstr "Geüpload naar deze aankondiging"
 
-#: includes/class-bfrwcore.php:193
+#: includes/class-bfrwcore.php:197
 msgid "Filter notifications list"
 msgstr "Filter aankondigingen lijst"
 
-#: includes/class-bfrwcore.php:195
+#: includes/class-bfrwcore.php:199
 msgid "Notifications list navigation"
 msgstr "Aankondigingen lijst navigatie"
 
-#: includes/class-bfrwcore.php:196
+#: includes/class-bfrwcore.php:200
 msgid "Notifications list"
 msgstr "Aankondigingen lijst"
 
-#: includes/class-bfrwcore.php:197
+#: includes/class-bfrwcore.php:201
 msgid "Notification published"
 msgstr "Aankondiging gepubliceerd"
 
-#: includes/class-bfrwcore.php:198
+#: includes/class-bfrwcore.php:202
 msgid "Notification published privately"
 msgstr "Aankondiging privé gepubliceerd"
 
-#: includes/class-bfrwcore.php:199
+#: includes/class-bfrwcore.php:203
 msgid "Notification reverted to draft"
 msgstr "Aankondiging teruggedraaid naar concept"
 
-#: includes/class-bfrwcore.php:200
+#: includes/class-bfrwcore.php:204
 msgid "Notification scheduled"
 msgstr "Aankondiging ingepland"
 
-#: includes/class-bfrwcore.php:201
+#: includes/class-bfrwcore.php:205
 msgid "Notification updated"
 msgstr "Aankondiging geüpdatet"
 
-#: includes/class-bfrwcore.php:203
+#: includes/class-bfrwcore.php:207
 msgid "Notification post type"
 msgstr "Aankondiging post type"
 
-#: includes/class-bfrwcore.php:233
+#: includes/class-bfrwcore.php:239
 msgid "Requested song bid"
 msgstr "Aangevraagd nummer bod"
 
-#: includes/class-bfrwcore.php:234
+#: includes/class-bfrwcore.php:240
 msgid "Price paid for requesting the song"
 msgstr "Prijs betaald voor het aanvragen van het nummer"

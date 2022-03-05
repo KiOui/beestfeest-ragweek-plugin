@@ -21,7 +21,7 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 		 *
 		 * @var BFRWCore|null
 		 */
-		protected static ?BFRWCore $_instance = null;
+		protected static $_instance = null;
 
 		/**
 		 * BeestFeest RAGweek Core.
@@ -31,7 +31,7 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 		 * @static
 		 * @return BFRWCore
 		 */
-		public static function instance(): BFRWCore {
+		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
 				self::$_instance = new self();
 			}
@@ -95,12 +95,14 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 		 * Activation hook call.
 		 */
 		public function activation() {
+			add_role( 'bfrw_manager', __( 'RAGweek manager', 'beestfeest-ragweek' ) );
 		}
 
 		/**
 		 * Deactivation hook call.
 		 */
 		public function deactivation() {
+			remove_role( 'bfrw_manager' );
 		}
 
 		/**
@@ -160,6 +162,8 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 					'has_archive' => false,
 					'can_export' => true,
 					'delete_with_user' => false,
+					'capability_type' => array( 'bfrw_manager', 'bfrw_requested_songs' ),
+					'map_meta_cap' => true,
 				)
 			);
 			remove_post_type_support( 'bfrw_requested_songs', 'editor' );
@@ -216,6 +220,8 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 					'has_archive' => false,
 					'can_export' => true,
 					'delete_with_user' => false,
+					'capability_type' => array( 'bfrw_manager', 'bfrw_notifications' ),
+					'map_meta_cap' => true,
 				)
 			);
 			remove_post_type_support( 'bfrw_notifications', 'editor' );
@@ -244,10 +250,43 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 		}
 
 		/**
-		 * Add pluggable support to functions
+		 * Add pluggable support to functions.
 		 */
 		public function pluggable() {
 			include_once BFRW_ABSPATH . 'includes/bfrw-functions.php';
+		}
+
+		/**
+		 * Add role capabilities.
+		 */
+		public function add_role_capabilities() {
+			foreach ( array( 'bfrw_manager', 'administrator' ) as $role_str ) {
+				$role = get_role( $role_str );
+				if ( isset( $role ) ) {
+					$role->add_cap( 'read' );
+					$role->add_cap( 'edit_bfrw_notifications' );
+					$role->add_cap( 'read_bfrw_notifications' );
+					$role->add_cap( 'delete_bfrw_notifications' );
+					$role->add_cap( 'read_private_bfrw_notifications' );
+					$role->add_cap( 'edit_others_bfrw_notifications' );
+					$role->add_cap( 'publish_bfrw_notifications' );
+					$role->add_cap( 'edit_published_bfrw_notifications' );
+					$role->add_cap( 'delete_others_bfrw_notifications' );
+					$role->add_cap( 'delete_private_bfrw_notifications' );
+					$role->add_cap( 'delete_published_bfrw_notifications' );
+
+					$role->add_cap( 'edit_bfrw_requested_songs' );
+					$role->add_cap( 'read_bfrw_requested_songs' );
+					$role->add_cap( 'delete_bfrw_requested_songs' );
+					$role->add_cap( 'read_private_bfrw_requested_songs' );
+					$role->add_cap( 'edit_others_bfrw_requested_songs' );
+					$role->add_cap( 'publish_bfrw_requested_songs' );
+					$role->add_cap( 'edit_published_bfrw_requested_songs' );
+					$role->add_cap( 'delete_others_bfrw_requested_songs' );
+					$role->add_cap( 'delete_private_bfrw_requested_songs' );
+					$role->add_cap( 'delete_published_bfrw_requested_songs' );
+				}
+			}
 		}
 
 		/**
@@ -280,6 +319,7 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 				add_action( 'manage_bfrw_requested_songs_posts_custom_column', 'bfrw_requested_songs_columns_values', 10, 2 );
 				add_filter( 'manage_edit-bfrw_requested_songs_sortable_columns', 'bfrw_requested_songs_sortable_columns' );
 				add_action( 'pre_get_posts', 'bfrw_requested_songs_sort_column' );
+				add_action( 'admin_init', array( $this, 'add_role_capabilities' ) );
 			} else {
 				add_filter( 'template_include', 'bfrw_override_template' );
 			}

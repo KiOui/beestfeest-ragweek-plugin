@@ -24,28 +24,28 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 *
 		 * @var string
 		 */
-		private string $meta_box_name;
+		private $meta_box_name;
 
 		/**
 		 * Meta fields of this meta box.
 		 *
 		 * @var array
 		 */
-		private array $meta_fields;
+		private $meta_fields;
 
 		/**
 		 * Post type meta box should be registered on
 		 *
 		 * @var string
 		 */
-		private string $post_type;
+		private $post_type;
 
 		/**
 		 * Title of the meta box
 		 *
 		 * @var string
 		 */
-		private string $meta_box_title;
+		private $meta_box_title;
 
 		/**
 		 * WidgetCollectionMetabox constructor.
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 * @param string $post_type post type to register meta box on.
 		 * @param string $meta_box_title title of the meta box.
 		 */
-		public function __construct( string $meta_box_name, array $meta_fields, string $post_type, string $meta_box_title ) {
+		public function __construct( $meta_box_name, $meta_fields, $post_type, $meta_box_title ) {
 			$this->meta_box_name = $meta_box_name;
 			$this->meta_fields = $meta_fields;
 			$this->post_type = $post_type;
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 *
 		 * @return string name of the nonce corresponding to this meta box
 		 */
-		private function get_nonce_name(): string {
+		private function get_nonce_name() {
 			return $this->meta_box_name . '_nonce';
 		}
 
@@ -228,7 +228,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 * @param int $post_id the post id to save the data for.
 		 * @return int: post_id
 		 */
-		public function save_meta_box( int $post_id ): int {
+		public function save_meta_box( $post_id ) {
 			if ( ! isset( $_POST[ $this->get_nonce_name() ] ) || ! wp_verify_nonce( wp_unslash( $_POST[ $this->get_nonce_name() ] ), basename( __FILE__ ) ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				return $post_id;
 			}

@@ -3,7 +3,7 @@
  * Plugin Name: BeestFeest RAGweek Plugin
  * Description: A WordPress plugin for the BeestFeest RAGweek edition
  * Plugin URI: https://github.com/KiOui/beestfeest-ragweek-plugin
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Lars van Rhijn
  * Author URI: https://larsvanrhijn.nl/
  * Text Domain: beestfeest-ragweek
