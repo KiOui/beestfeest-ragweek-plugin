@@ -24,6 +24,12 @@ function messagesListMakeHTML(jsondata) {
     }
 }
 
+function decodeHtml(html) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+
 function refresh_data() {
     try {
         fetch('/wp-json/wp/v2/bfrw_requested_songs')
@@ -44,7 +50,7 @@ function refresh_data() {
 
                 let elem = document.getElementById("songs");
                 if (elem.innerHTML !== list) {
-                    elem.innerHTML = list;
+                    elem.innerHTML = decodeHtml(list);
                 }
 
             });
@@ -58,7 +64,7 @@ function refresh_data() {
 
                     let elem = document.getElementById("scroller");
                     if (elem.innerHTML !== list) {
-                        elem.innerHTML = list;
+                        elem.innerHTML = decodeHtml(list);
                     }
 
                 });
