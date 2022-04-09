@@ -198,7 +198,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 										?>
 											<select name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>">
 												<?php foreach ( $field['options'] as $option ) : ?>
-													<option 
+													<option
 													<?php
 													if ( $meta == $option['value'] ) :
 														echo 'selected="selected"';
@@ -241,11 +241,21 @@ if ( ! class_exists( 'Metabox' ) ) {
 				foreach ( $this->meta_fields as $field ) {
 					$old = get_post_meta( $post_id, $field['id'], true );
 					$new = isset( $_POST[ $field['id'] ] ) ? wp_unslash( $_POST[ $field['id'] ] ) : false; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-					if ( $new && $new != $old ) {
-						update_post_meta( $post_id, $field['id'], $new );
-					} elseif ( ! $new && $old ) {
-						delete_post_meta( $post_id, $field['id'], $old );
-					}
+                    $value_updated = $new != $old;
+                    if ( $new ) {
+                        if ( $value_updated ) {
+	                        update_post_meta( $post_id, $field['id'], $new );
+                        }
+                    } else {
+                        // Value has been removed or is not set.
+                        if ( $field['required'] ) {
+	                        update_post_meta( $post_id, $field['id'], $field['default'] );
+                        } else {
+                            if ( $value_updated ) {
+	                            delete_post_meta( $post_id, $field['id'], $old );
+                            }
+                        }
+                    }
 				}
 			}
 			return $post_id;

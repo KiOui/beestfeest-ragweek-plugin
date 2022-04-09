@@ -14,7 +14,7 @@ wp_enqueue_script( 'jquery' );
 ?>
 <meta charset="utf-8">
 <head>
-	<title>Ragweek <?php echo esc_html( gmdate( 'Y' ) ); ?> &ndash; Donations list</title>
+	<title>Ragweek &ndash; Donations list</title>
 	<?php
 	// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_attr( BFRW_PLUGIN_URI . 'assets/css/ragweek.css' ); ?>">

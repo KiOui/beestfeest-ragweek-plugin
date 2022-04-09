@@ -242,6 +242,8 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 						'type'  => 'number',
 						'min'   => 0,
 						'step'  => 0.01,
+						'required' => true,
+						'default' => 0,
 					),
 				),
 				'bfrw_requested_songs',
