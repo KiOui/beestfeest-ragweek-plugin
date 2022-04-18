@@ -27,7 +27,7 @@ body {
 
 /* background video */
 
-.bfrw-wrapper video.background-video {
+.bfrw-video-wrapper video.background-video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -36,9 +36,11 @@ body {
   margin: auto;
   min-height: 50%;
   min-width: 50%;
+  max-width: unset;
+  max-height: unset;
 }
 
-div.bfrw-wrapper {
+div.bfrw-video-wrapper {
   display: block;
   position: fixed;
   top: -50%;
@@ -58,7 +60,6 @@ div.bfrw-songs {
 div.bfrw-songs ul {
   list-style-type: none;
   font-family: 'League Gothic', sans-serif;
-  font-size: 45pt;
   color: white;
   text-align: center;
   margin: 0;
@@ -99,9 +100,18 @@ div.bfrw-bottom-fixed .messages {
 }
 
 div.bfrw-bottom-fixed .messages-scroller {
-  font-size: 45pt;
   font-family: 'League Gothic', sans-serif;
   margin: 0;
   color: white;
   line-height: initial;
+}
+
+div.bfrw-wrapper {
+  font-size: 45pt;
+}
+
+@media screen and (max-width: 767px) {
+  div.bfrw-wrapper {
+    font-size: 24pt;
+  }
 }
