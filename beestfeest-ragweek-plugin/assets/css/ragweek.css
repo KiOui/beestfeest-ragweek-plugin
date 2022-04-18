@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
-img.top-centered {
+img.bfrw-top-centered {
   display: block;
   z-index: 1;
   width: 80%;
@@ -18,7 +18,7 @@ html {
   margin: 0;
 }
 
-body{
+body {
   background-color: black;
   margin: 0;
   min-height: 100%;
@@ -27,7 +27,7 @@ body{
 
 /* background video */
 
-video.background-video {
+.bfrw-wrapper video.background-video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -38,7 +38,7 @@ video.background-video {
   min-width: 50%;
 }
 
-div.wrapper {
+div.bfrw-wrapper {
   display: block;
   position: fixed;
   top: -50%;
@@ -48,14 +48,14 @@ div.wrapper {
   z-index: -2;
 }
 
-div.songs {
+div.bfrw-songs {
   position: relative;
   z-index: 0;
   width: 100%;
   margin-top: 20px;
 }
 
-div.songs ul {
+div.bfrw-songs ul {
   list-style-type: none;
   font-family: 'League Gothic', sans-serif;
   font-size: 45pt;
@@ -65,37 +65,30 @@ div.songs ul {
   padding: 0 0 250px;
 }
 
-div.songs ul li {
+div.bfrw-songs ul li {
   margin-top: 5px;
 }
 
-div.bottom-fixed {
+div.bfrw-bottom-fixed {
   position: fixed;
   bottom: 0;
   z-index: 4;
   width: 100%;
 }
 
-img.gradient {
+div.bfrw-bottom-fixed img.gradient {
   width: 100%;
   max-height: 200px;
 }
 
-div.bar {
-  width: 95%;
-  margin: auto;
-  border-bottom: 1px solid white;
-  z-index: 5;
-}
-
 /* Message banner */
 
-.full-width {
+div.bfrw-bottom-fixed .full-width {
   background-color: black;
   width: 100%;
 }
 
-.messages {
+div.bfrw-bottom-fixed .messages {
   width: 95%;
   margin: auto;
   padding-bottom: 10px;
@@ -105,7 +98,7 @@ div.bar {
   border-top: 1px solid white;
 }
 
-.messages-scroller {
+div.bfrw-bottom-fixed .messages-scroller {
   font-size: 45pt;
   font-family: 'League Gothic', sans-serif;
   margin: 0;
