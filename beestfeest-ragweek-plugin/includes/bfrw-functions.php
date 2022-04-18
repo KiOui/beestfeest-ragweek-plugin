@@ -112,11 +112,20 @@ if ( ! function_exists( 'bfrw_override_template' ) ) {
 	 * @return string when the ragweek page is rendering, output the ragweek template location, $template otherwise.
 	 */
 	function bfrw_override_template( $template ) {
-		global $wp;
-		if ( 'ragweek' == $wp->request ) {
+		global $post;
+		if ( has_shortcode( $post->post_content, 'bfrw-ragweek' ) ) {
 			return BFRW_ABSPATH . 'views/ragweek.php';
 		} else {
 			return $template;
 		}
+	}
+}
+
+if ( ! function_exists( 'do_ragweek_shortcode' ) ) {
+	/**
+	 * Do RAGweek shortcode (do nothing because template will be overridden).
+	 */
+	function do_ragweek_shortcode( $atts ) {
+		return '';
 	}
 }

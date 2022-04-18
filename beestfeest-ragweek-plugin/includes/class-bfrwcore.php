@@ -292,11 +292,19 @@ if ( ! class_exists( 'BFRWCore' ) ) {
 		}
 
 		/**
+		 * Add custom shortcode.
+		 */
+		public function add_shortcode() {
+			add_shortcode( 'bfrw-ragweek', 'do_ragweek_shortcode' );
+		}
+
+		/**
 		 * Add actions and filters.
 		 */
 		private function actions_and_filters() {
 			add_action( 'after_setup_theme', array( $this, 'pluggable' ) );
 			add_action( 'init', array( $this, 'init' ) );
+			add_action( 'init', array( $this, 'add_shortcode' ) );
 			add_action( 'beestfeest_ragweek_init', array( $this, 'add_post_types' ) );
 			add_action( 'beestfeest_ragweek_init', array( $this, 'add_meta_box_support' ) );
 			add_action(

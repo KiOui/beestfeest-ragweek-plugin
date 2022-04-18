@@ -8,18 +8,17 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 wp_enqueue_script( 'bfrw-ragweek-script', BFRW_PLUGIN_URI . 'assets/js/board.js', array( 'jquery' ), '1.0', true );
 wp_enqueue_script( 'jquery' );
+wp_enqueue_style( 'brfw-styles', BFRW_PLUGIN_URI . 'assets/css/ragweek.css', array(), '1.0' );
 ?>
-<meta charset="utf-8">
 <head>
-	<title>Ragweek &ndash; Donations list</title>
-	<?php
-	// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo esc_attr( BFRW_PLUGIN_URI . 'assets/css/ragweek.css' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
 <div class="wrapper">
 	<video autoplay muted loop class="background-video" preload="auto">

@@ -110,4 +110,5 @@ div.bar {
   font-family: 'League Gothic', sans-serif;
   margin: 0;
   color: white;
+  line-height: initial;
 }
