@@ -17,7 +17,7 @@ if ( ! function_exists( 'bfrw_requested_songs_columns' ) ) {
 	 *
 	 * @return array the admin columns with the song price added.
 	 */
-	function bfrw_requested_songs_columns( $columns ) {
+	function bfrw_requested_songs_columns( array $columns ): array {
 		unset( $columns['date'] );
 		$columns['bfrw_requested_song_price'] = __( 'Current bid', 'beestfeest-ragweek' );
 		return $columns;
@@ -33,7 +33,7 @@ if ( ! function_exists( 'bfrw_requested_songs_columns_values' ) ) {
 	 *
 	 * @return void
 	 */
-	function bfrw_requested_songs_columns_values( $column, $post_id ) {
+	function bfrw_requested_songs_columns_values( string $column, int $post_id ) {
 		if ( 'bfrw_requested_song_price' === $column ) {
 			$current_bid = get_post_meta( $post_id, 'bfrw_requested_song_price', true );
 			echo esc_html( '&euro;' . bfrw_format_price( $current_bid ) );
@@ -49,7 +49,7 @@ if ( ! function_exists( 'bfrw_requested_songs_sortable_columns' ) ) {
 	 *
 	 * @return array an array with the song price column added.
 	 */
-	function bfrw_requested_songs_sortable_columns( $columns ) {
+	function bfrw_requested_songs_sortable_columns( array $columns ): array {
 		$columns['bfrw_requested_song_price'] = 'bfrw_requested_song_price';
 		return $columns;
 	}
@@ -63,7 +63,7 @@ if ( ! function_exists( 'bfrw_requested_songs_sort_column' ) ) {
 	 *
 	 * @return void
 	 */
-	function bfrw_requested_songs_sort_column( $query ) {
+	function bfrw_requested_songs_sort_column( WP_Query $query ) {
 		if ( 'bfrw_requested_song_price' == $query->query_vars['orderby'] ) {
 			$meta_query = array(
 				array(
@@ -85,7 +85,7 @@ if ( ! function_exists( 'bfrw_format_price' ) ) {
 	 *
 	 * @return string the formatted price.
 	 */
-	function bfrw_format_price( $price ) {
+	function bfrw_format_price( float $price ): string {
 		return number_format( $price, 2, ',', '.' );
 	}
 }
@@ -105,13 +105,13 @@ if ( ! function_exists( 'bfrw_get_price' ) ) {
 
 if ( ! function_exists( 'bfrw_override_template' ) ) {
 	/**
-	 * Override the theme template when the ragweek page is being displayed.
+	 * Override the theme template when the RAGweek page is being displayed.
 	 *
-	 * @param $template string template currently rendering.
+	 * @param string $template template currently rendering.
 	 *
-	 * @return string when the ragweek page is rendering, output the ragweek template location, $template otherwise.
+	 * @return string when the RAGweek page is rendering, output the RAGweek template location, $template otherwise.
 	 */
-	function bfrw_override_template( $template ) {
+	function bfrw_override_template( string $template ): string {
 		global $post;
 		if ( has_shortcode( $post->post_content, 'bfrw-ragweek' ) ) {
 			return BFRW_ABSPATH . 'views/ragweek.php';
@@ -123,9 +123,11 @@ if ( ! function_exists( 'bfrw_override_template' ) ) {
 
 if ( ! function_exists( 'do_ragweek_shortcode' ) ) {
 	/**
-	 * Do RAGweek shortcode (do nothing because template will be overridden).
+	 * Do RAGweek shortcode (do nothing because template will be overwritten).
+	 *
+	 * @param mixed $atts The attributes (not used).
 	 */
-	function do_ragweek_shortcode( $atts ) {
+	function do_ragweek_shortcode( $atts ): string {
 		return '';
 	}
 }

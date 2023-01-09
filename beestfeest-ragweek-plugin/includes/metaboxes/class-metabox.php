@@ -56,7 +56,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 * @param string $post_type post type to register meta box on.
 		 * @param string $meta_box_title title of the meta box.
 		 */
-		public function __construct( $meta_box_name, $meta_fields, $post_type, $meta_box_title ) {
+		public function __construct( string $meta_box_name, array $meta_fields, string $post_type, string $meta_box_title ) {
 			$this->meta_box_name = $meta_box_name;
 			$this->meta_fields = $meta_fields;
 			$this->post_type = $post_type;
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 		 *
 		 * @return string name of the nonce corresponding to this meta box
 		 */
-		private function get_nonce_name() {
+		private function get_nonce_name(): string {
 			return $this->meta_box_name . '_nonce';
 		}
 
@@ -236,8 +236,7 @@ if ( ! class_exists( 'Metabox' ) ) {
 			if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 				return $post_id;
 			}
-
-			if ( isset( $_POST['post_type'] ) && wp_unslash( $_POST['post_type'] ) == $this->post_type && current_user_can( 'edit_post' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			if ( isset( $_POST['post_type'] ) && wp_unslash( $_POST['post_type'] ) == $this->post_type && current_user_can( 'edit_post', $post_id ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				foreach ( $this->meta_fields as $field ) {
 					$old = get_post_meta( $post_id, $field['id'], true );
 					$new = isset( $_POST[ $field['id'] ] ) ? wp_unslash( $_POST[ $field['id'] ] ) : false; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
