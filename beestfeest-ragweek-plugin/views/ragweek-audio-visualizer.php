@@ -66,7 +66,7 @@ wp_enqueue_style( 'bfrw-audio-visualizer-styles', BFRW_PLUGIN_URI . 'assets/css/
 
 			navigator.mediaDevices.getUserMedia( { audio: true } )
 				.then((stream) => {
-					let audioVisualizer = new AudioVisualizer(document.getElementById('visualizer'), audioContent, stream);
+					let audioVisualizer = new AudioVisualizer(document.getElementById('visualizer'), audioContent, stream, 64);
 					audioVisualizer.run();
 				})
 				.catch((e) => {
