@@ -3,7 +3,7 @@ html, body.bfrw-body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: #1a1a1a;
 }
 
 div.audio-visualizer-wrapper {
