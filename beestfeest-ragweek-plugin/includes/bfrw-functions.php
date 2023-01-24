@@ -114,7 +114,11 @@ if ( ! function_exists( 'bfrw_override_template' ) ) {
 	function bfrw_override_template( string $template ): string {
 		global $post;
 		if ( has_shortcode( $post->post_content, 'bfrw-ragweek' ) ) {
-			return BFRW_ABSPATH . 'views/ragweek.php';
+			if ( isset( $_GET['visualizer'] ) && 'audio' === $_GET['visualizer'] ) {
+				return BFRW_ABSPATH . 'views/ragweek-audio-visualizer.php';
+			} else {
+				return BFRW_ABSPATH . 'views/ragweek.php';
+			}
 		} else {
 			return $template;
 		}
