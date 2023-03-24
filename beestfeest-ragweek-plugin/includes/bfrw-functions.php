@@ -35,7 +35,7 @@ if ( ! function_exists( 'bfrw_requested_songs_columns_values' ) ) {
 	 */
 	function bfrw_requested_songs_columns_values( string $column, int $post_id ) {
 		if ( 'bfrw_requested_song_price' === $column ) {
-			$current_bid = get_post_meta( $post_id, 'bfrw_requested_song_price', true );
+			$current_bid = floatval( get_post_meta( $post_id, 'bfrw_requested_song_price', true ) );
 			echo esc_html( '&euro;' . bfrw_format_price( $current_bid ) );
 		}
 	}
